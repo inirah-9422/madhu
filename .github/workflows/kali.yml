@@ -1,0 +1,17 @@
+name: Kali Linux Cloud
+
+on:
+  workflow_dispatch:
+
+jobs:
+  kali:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update system
+        run: sudo apt update
+
+      - name: Install Kali tools
+        run: sudo apt install kali-linux-top10 -y
+
+      - name: Show system info
+        run: uname -a
